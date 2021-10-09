@@ -1,0 +1,28 @@
+section.business
+            .container
+                h1.business-title EMPOWER YOUR BUSINESS
+                p.business-text We know how large objects will act,
+                    | but things on a small scale.
+                button.business-get Get Quote Now
+                button.business-more Learn More
+                .business-items
+                mixin item(title,text,img)
+                    .business-col
+                        .item
+                            img(src="", alt="img")
+                            .item-title=title 
+                            .item-text=text 
+                +item('Digital Marketing','We focus on ergonomics')
+                +item('Digital Marketing2','We focus on')
+                +item('Digital Marketing3','We focus')
+                mixin item2(args={})
+                    .business-col
+                        .item
+                            img(src=args.img, alt="img")
+                            .item-title=args.title 
+                            .item-text=args.text 
+                +item2({
+                    title:'',
+                    img:'',
+                    text:''
+                })
